@@ -1,0 +1,14 @@
+.menuItem {
+    margin: 10px;
+    color: white;
+}
+.header {
+    background-color: #1A1A1D;
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    align-items: center;
+}
+.active {
+    color: red;
+}

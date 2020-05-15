@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import Chat from './components/Chat';
 import History from './components/History';
-import Header from './components/Header/Header';
+import Header from './components/Header';
 
 const App = () => {
   return (

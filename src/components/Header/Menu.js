@@ -1,19 +1,17 @@
+import './styles.scss';
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Menu = () => (
-  <div>
-    <Link
-      to='/chat'
-    >
+  <>
+    <NavLink to="/chat" className="menuItem" activeClassName="active">
       Chat
-    </Link>
-    <Link
-      to='/history'
-    >
+    </NavLink>
+    <NavLink to="/history" className="menuItem" activeClassName="active">
       History
-    </Link>
-  </div>
+    </NavLink>
+  </>
 );
 
 export default Menu;
