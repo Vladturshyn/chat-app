@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import Input from '../Shared/Input';
 import Messages from '../Shared/Messages';
 import useLocalStorage from '../../hooks/useLocalStorage';
+import { MESSAGES, REMOVE_MESSAGE } from '../../assets/constants';
 
 const Chat = () => {
   const [message, setMessage] = useState('');
-  const [localMessages, setLocalMessages] = useLocalStorage('messages', []);
+  const [localMessages, setLocalMessages] = useLocalStorage(MESSAGES, []);
 
   const sendMessage = (event) => {
     event.preventDefault();
@@ -17,7 +18,7 @@ const Chat = () => {
   const removeMessage = (id) => {
     const removeMessagesText = localMessages.map((message) => {
       if (message.id === id) {
-        return { text: 'Message was removed', id: id };
+        return { text: REMOVE_MESSAGE, id: id };
       }
       return message;
     });
